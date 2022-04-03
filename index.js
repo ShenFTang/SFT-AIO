@@ -15,7 +15,8 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  win.loadFile('dist/sft-aio/index.html')
+  // win.loadFile('dist/sft-aio/index.html')
+  win.loadURL('http://localhost:4200')
 
   // Open the DevTools.
   win.webContents.openDevTools()
