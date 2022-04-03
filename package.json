@@ -1,11 +1,22 @@
 {
   "name": "sft-aio",
   "version": "0.0.0",
+  "main": "main.js",
+  "build": {
+    "appId": "com.letscookeveryday",
+    "productName": "SFT-AIO",
+    "files": [
+      "main.js",
+      "dist/sft-aio"
+    ]
+  },
   "scripts": {
     "ng": "ng serve",
     "prestart": "npm run build",
     "start": "electron .",
     "clean": "rimraf dist",
+    "prerelease": "npm run build -- --prod",
+    "release": "electron-builder",
     "prebuild": "npm run clean",
     "build": "ng build",
     "test": "ng test",
@@ -33,6 +44,7 @@
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "electron": "^18.0.1",
+    "electron-builder": "^22.14.13",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
